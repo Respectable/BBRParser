@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package bbrparserrunner;
+package pbpParser;
 import java.io.*;
 import pbpParser.PBPParser;
 import org.antlr.v4.runtime.*;

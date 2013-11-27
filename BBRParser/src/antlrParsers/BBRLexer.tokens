@@ -1,8 +1,0 @@
-START_PBP=1
-TAG_ALT=5
-TEXT=6
-END_PBP=4
-JUNK_TEXT=3
-TAG=2
-'</table>'=4
-'<table class="no_highlight stats_table">'=1

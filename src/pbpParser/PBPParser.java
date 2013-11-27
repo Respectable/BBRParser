@@ -5,8 +5,8 @@
 package pbpParser;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
-import antlrParsers.*;
 import java.util.*;
+import antlrParsers.BBRLexer;
 
 /**
  *
@@ -16,11 +16,13 @@ public class PBPParser
 {
     public Tree parse(ANTLRInputStream input)
     {
-        BBRLexer lexer = new BBRLexer(input);
-        List<Token> tokens = lexer.getAllTokens();
+        antlrParsers.BBRLexer lex = new BBRLexer(input);
+        CommonTokenStream tokens = new CommonTokenStream(lex);
+        tokens.fill();
+        List<Token> tokenList = tokens.getTokens();
         String tokenString = "";
         
-        for(Token t : tokens) tokenString += t.getText();
+        for(Token t : tokenList) tokenString +=  t.getText() + "\n";
         
         System.out.println(tokenString);
         
